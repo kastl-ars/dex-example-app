@@ -6,7 +6,7 @@ RUN go mod tidy
 RUN go build -o example-app
 
 #
-FROM alpine:3.20
+FROM alpine:3.21
 WORKDIR /root/
 COPY --from=builder /src/app/example-app ./app/
 CMD ["./app/example-app"]
