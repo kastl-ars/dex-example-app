@@ -1,4 +1,4 @@
-FROM golang:1.23.5-alpine3.20 as builder
+FROM golang:1.23.6-alpine3.20 as builder
 WORKDIR /src/app
 COPY main.go templates.go ./
 RUN go mod init example-app
